@@ -1,0 +1,127 @@
+@import "reset";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+
+@keyframes shake {
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+  40%,
+  60% {
+    margin-left: 12px;
+  }
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+html {
+  font-family: "Noto Sans", sans-serif;
+  background-color: rgb(243, 243, 243);
+  font-size: 16px;
+
+  .wrapper {
+    width: 50%;
+    margin: 8rem auto;
+    padding: 3rem 2rem;
+    border-radius: 4px;
+    background-color: #fafafa;
+
+    .title {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 2.5rem;
+      color: rgb(100, 114, 146);
+    }
+
+    .loginForm {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 auto;
+
+      label {
+        padding: 1rem 0;
+        color: rgb(100, 114, 146);
+      }
+
+      &__field {
+        border: none;
+        border-bottom: 1px solid rgb(100, 114, 146);
+        margin-bottom: 0.8rem;
+        outline: none;
+        padding: 0.8rem;
+        background-color: #fafafa;
+
+        &::placeholder {
+          color: #a1a1a1;
+        }
+      }
+
+      .shake {
+        animation: shake 0.3s ease-in-out;
+      }
+
+      &__submit {
+        width: 50%;
+        padding: 1rem 0;
+        margin: 2rem auto 0;
+        border: none;
+        border-radius: 4px;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(100, 114, 146);
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+          filter: contrast(1.5);
+        }
+      }
+
+      .loader {
+        display: inline-block;
+        margin: 2rem auto;
+        fill: rgb(100, 114, 146);
+      }
+
+      .none {
+        display: none;
+      }
+
+      &--error {
+        color: rgb(163, 47, 71);
+        text-align: center;
+        font-size: 1rem;
+      }
+
+      &--error.isActive {
+        display: block;
+        animation: show-message 1s ease-out both;
+      }
+
+      .successMsg {
+        text-align: center;
+        font-size: 1.2rem;
+        color: rgb(24, 145, 24);
+        margin-top: 1rem;
+        padding: 1rem;
+        background-color: #edf8ee;
+      }
+    }
+  }
+}

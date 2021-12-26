@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <main class="wrapper">
+      <h1 class="title">Login form</h1>
+      <form action="#" class="loginForm">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email--field"
+          placeholder="enter your email"
+          class="loginForm__field inputs"
+          title="Introduce una dirección de correo válida"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+        />
+
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password--field"
+          placeholder="enter your password"
+          class="loginForm__field inputs"
+          title="Al menos 8 caracteres. Debe incluir como mínimo una letra y un número"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+          autocomplete="on"
+        />
+        <svg
+          width="60"
+          height="30"
+          viewBox="0 0 120 30"
+          class="loader none"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="#262626"
+        >
+          <circle cx="15" cy="15" r="15">
+            <animate
+              attributeName="r"
+              from="15"
+              to="15"
+              begin="0s"
+              dur="0.8s"
+              values="15;9;15"
+              calcMode="linear"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="fill-opacity"
+              from="1"
+              to="1"
+              begin="0s"
+              dur="0.8s"
+              values="1;.5;1"
+              calcMode="linear"
+              repeatCount="indefinite"
+            />
+          </circle>
+          <circle cx="60" cy="15" r="9" fill-opacity="0.3">
+            <animate
+              attributeName="r"
+              from="9"
+              to="9"
+              begin="0s"
+              dur="0.8s"
+              values="9;15;9"
+              calcMode="linear"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="fill-opacity"
+              from="0.5"
+              to="0.5"
+              begin="0s"
+              dur="0.8s"
+              values=".5;1;.5"
+              calcMode="linear"
+              repeatCount="indefinite"
+            />
+          </circle>
+          <circle cx="105" cy="15" r="15">
+            <animate
+              attributeName="r"
+              from="15"
+              to="15"
+              begin="0s"
+              dur="0.8s"
+              values="15;9;15"
+              calcMode="linear"
+              repeatCount="indefinite"
+            />
+            <animate
+              attributeName="fill-opacity"
+              from="1"
+              to="1"
+              begin="0s"
+              dur="0.8s"
+              values="1;.5;1"
+              calcMode="linear"
+              repeatCount="indefinite"
+            />
+          </circle>
+        </svg>
+        <input type="submit" value="Login" class="loginForm__submit" />
+        <span class="successMsg none">Te has logueado correctamente!</span>
+      </form>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>

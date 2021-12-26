@@ -1,0 +1,253 @@
+/******-----RESET CSS-----******/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/******-----MIS ESTILOS-----******/
+@-webkit-keyframes shake {
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+  40%,
+  60% {
+    margin-left: 12px;
+  }
+}
+@keyframes shake {
+  0%,
+  100% {
+    margin-left: 0px;
+  }
+  20%,
+  80% {
+    margin-left: -12px;
+  }
+  40%,
+  60% {
+    margin-left: 12px;
+  }
+}
+
+@-webkit-keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes show-message {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+html {
+  font-family: "Noto Sans", sans-serif;
+  background-color: #f3f3f3;
+  font-size: 16px;
+}
+
+html .wrapper {
+  width: 50%;
+  margin: 8rem auto;
+  padding: 3rem 2rem;
+  border-radius: 4px;
+  background-color: #fafafa;
+}
+
+html .wrapper .title {
+  text-align: center;
+  margin: 2rem 0;
+  font-size: 2.5rem;
+  color: #647292;
+}
+
+html .wrapper .loginForm {
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+html .wrapper .loginForm label {
+  padding: 1rem 0;
+  color: #647292;
+}
+
+html .wrapper .loginForm__field {
+  border: none;
+  border-bottom: 1px solid #647292;
+  margin-bottom: 0.8rem;
+  outline: none;
+  padding: 0.8rem;
+  background-color: #fafafa;
+}
+
+html .wrapper .loginForm__field::-webkit-input-placeholder {
+  color: #a1a1a1;
+}
+
+html .wrapper .loginForm__field:-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+html .wrapper .loginForm__field::-ms-input-placeholder {
+  color: #a1a1a1;
+}
+
+html .wrapper .loginForm__field::placeholder {
+  color: #a1a1a1;
+}
+
+html .wrapper .loginForm .shake {
+  -webkit-animation: shake 0.3s ease-in-out;
+          animation: shake 0.3s ease-in-out;
+}
+
+html .wrapper .loginForm__submit {
+  width: 50%;
+  padding: 1rem 0;
+  margin: 2rem auto 0;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+  background-color: #647292;
+  cursor: pointer;
+  outline: none;
+}
+
+html .wrapper .loginForm__submit:hover {
+  -webkit-filter: contrast(1.5);
+          filter: contrast(1.5);
+}
+
+html .wrapper .loginForm .loader {
+  display: inline-block;
+  margin: 2rem auto;
+  fill: #647292;
+}
+
+html .wrapper .loginForm .none {
+  display: none;
+}
+
+html .wrapper .loginForm--error {
+  color: #a32f47;
+  text-align: center;
+  font-size: 1rem;
+}
+
+html .wrapper .loginForm--error.isActive {
+  display: block;
+  -webkit-animation: show-message 1s ease-out both;
+          animation: show-message 1s ease-out both;
+}
+
+html .wrapper .loginForm .successMsg {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #189118;
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #edf8ee;
+}
